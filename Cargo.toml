@@ -1,0 +1,8 @@
+[package]
+name = "chess_yew"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+chess = { git = "https://github.com/upsidedown8/chess" }
+yew = "0.19"
