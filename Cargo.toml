@@ -4,5 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-chess = { git = "https://github.com/upsidedown8/chess" }
+chess = { path = "../chess" }
 yew = "0.19"
+log = "0.4.6"
+wasm-logger = "0.2.0"
+
+[profile.dev]
+opt-level = 2

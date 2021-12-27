@@ -10,7 +10,7 @@ html {
 }
 
 .board {
-    width: 450px;
+    width: 640px;
     margin: auto;
 }
 .board-row:after {
@@ -24,20 +24,32 @@ html {
     background: white;
     border: 1px solid #999;
     float: left;
-    font-size: 5rem;
-    line-height: 150px;
+    font-size: 4rem;
+    line-height: 80px;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    height: 150px;
-    width: 150px;
+    width: 80px;
+    height: 80px;
 }
 
 .square:focus {
     background: #e5e5e5;
 }
 
-.btn-reset {
-    margin: 20px;
+.square-black {
+    background-color: #ccc;
+}
+.square-white {
+    background-color: white;
+}
+.square-highlighted {
+    background-color: rgb(202, 228, 250);
+}
+
+.score,
+.zobrist {
+    font-size: 20px;
+    padding-top: 10px;
 }

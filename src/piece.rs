@@ -12,31 +12,29 @@ impl Component for Piece {
     type Message = ();
     type Properties = Props;
 
-    fn create(ctx: &Context<Self>) -> Self {
+    fn create(_: &Context<Self>) -> Self {
         Self {}
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         use piece::Piece::*;
 
-        let img = match ctx.props().piece {
-            WhitePawn => "wp",
-            WhiteKnight => "wn",
-            WhiteBishop => "wb",
-            WhiteRook => "wr",
-            WhiteQueen => "wq",
-            WhiteKing => "wk",
-
-            BlackPawn => "bp",
-            BlackKnight => "bn",
-            BlackBishop => "bb",
-            BlackRook => "br",
-            BlackQueen => "bq",
-            BlackKing => "bk",
-        };
-
         html! {
-            <svg />
+            <div class="piece">{match ctx.props().piece {
+                WhitePawn => '♙',
+                WhiteKnight => '♘',
+                WhiteBishop => '♗',
+                WhiteRook => '♖',
+                WhiteQueen => '♕',
+                WhiteKing => '♔',
+
+                BlackPawn => '♟',
+                BlackKnight => '♞',
+                BlackBishop => '♝',
+                BlackRook => '♜',
+                BlackQueen => '♛',
+                BlackKing => '♚',
+            }}</div>
         }
     }
 }
